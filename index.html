@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>RSS Reader</title>
+	<!-- STYLE -->
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/animate.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="icon" href="imgs/logo.ico">
+</head>
+<body>
+	 <div id="preloader">
+		<div class="spinner">
+		  <div class="bounce1"></div>
+		  <div class="bounce2"></div>
+		  <div class="bounce3"></div>
+		</div>
+	</div> 
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	   	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+	      <a class="navbar-brand" href="#">RSS Reader</a>
+	    </div><!-- /.navbar-header -->
+	    <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#" onclick='loadData("http://www.dnes.bg/rss.php?today")'>Новини днес</a></li>
+            <li><a href="#" onclick='loadData("http://www.dnes.bg/rss.php?cat=1")'>България</a></li>
+            <li><a href="#" onclick='loadData("http://www.dnes.bg/rss.php?cat=3")'>Бизнес</a></li>
+            <li><a href="#" onclick='loadData("http://www.dnes.bg/rss.php?cat=2")'>Свят</a></li>
+            <li><a href="#" onclick='loadData("http://www.dnes.bg/rss.php?cat=6")'>Крими</a></li>
+            <li><a href="#" onclick='loadData("http://www.dnes.bg/rss.php?cat=9")'>Спорт</a></li>
+            <li><a href="#" onclick='loadData("http://www.dnes.bg/rss.php?cat=4")'>Наука и технологии</a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<div style="margin-top: 100px;"></div>
+	<div class="container-fluid" id="feedContainer">
+	</div><!-- /#feedContainer -->
+
+
+
+	<!-- SCRIPT -->
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+	<script type="text/javascript" src="scripts/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="scripts/moment.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>
